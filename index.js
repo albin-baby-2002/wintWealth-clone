@@ -25,7 +25,7 @@
 
                 const content = Objects.target.parentNode.querySelector(".content");
                 content.classList.toggle("contentPlus");
-                Objects.target.parentNode.classList.toggle("height")
+                Objects.target.parentNode.classList.toggle("boxShadowPlus")
             })})
 
 
