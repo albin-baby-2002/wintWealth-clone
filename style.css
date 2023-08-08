@@ -62,7 +62,7 @@
 header{
  width: 100%;
  display: flex;
- padding: 24px 0px;
+ padding: 20px 0px;
  max-width:960px;
  margin: auto;
  justify-content: space-between;
@@ -283,8 +283,8 @@ header button:hover{
   border-top: 1px solid rgb(197, 192, 192);
   flex-direction: column;
   transition: max-height .5s;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 8px 30px;
-  padding: 20px;
+  
+  padding: 30px;
   
 }
 
@@ -292,6 +292,7 @@ header button:hover{
   margin: 30px 30px 30px 0px;
   font-size: .8rem;
   font-weight: 200;
+  display: none;
 }
 
 
@@ -311,7 +312,12 @@ header button:hover{
 }
 
 .contentPlus{
-  display: none;
+  display: block;
+  
+}
+
+.boxShadowPlus{
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 8px 30px;
 }
 
 .height {
@@ -600,18 +606,156 @@ header button:hover{
 
 
 
+.toolTip {
+  display: none;
+  position:absolute;
+  top:45%;
+  left: 24%;
+  color: white;
+  font-weight: bold;
+  animation: tools 500ms ease;
+  
+}
+
+
+.card-image:hover .toolTip{
+  display: block;
+  /* left:24%; */
+}
+
+.card-image:hover{
+  opacity: .7;
+}
+
+
+@keyframes tools {
+
+  0%{
+    transform: translateX(-240px);
+    display: none;
+  }
+
+  20%{
+    transform: translateX(-120px);
+    display: none
+  }
+  
+
+  40%{
+    transform: translateX(-30px);
+    display: none;
+    
+
+  
+  }
+
+  60%{
+    transform: translateX(0px);
+  }
+
+  
+
+
+  
+}
 
 
 
 
 
+.influencers{
+
+
+  margin:auto;
+  display: flex;
+  flex-direction: column;
+
+ 
+}
+
+.influencersHead{
+  max-width: 60%;
+  margin: auto;
+  text-align: center;
+}
+
+.influencersHead div{
+  font-size: 3rem;
+  font-weight: bold
+}
+
+.influencersHead > p{
+  max-width: 70%;
+  text-align: center;
+  margin: auto;
+}
+
+.slidingWall{
+  margin-top: 50px;
+  display: flex;
+  gap:10px;
+  animation: slidingWalls 40s linear infinite ;
+}
+
+.wallCol{
+  
+  display: grid;
+  gap: 20px;
+  padding:20px
+}
+
+.professionals{
+  width: 300px;
+  height: 170px;
+  display: flex;
+  gap: 25px;
+
+  border: 1px solid rgb(114, 112, 112);
+  padding: 10px;
+}
+
+.professionals > img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.proDescription{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+
+.proDescription img{
+ width: 70px;
+
+}
+
+.proDescription > p{
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.proDescription >span{
+  font-size: .9rem;
+  color: rgb(114, 112, 112);
+}
 
 
 
+@keyframes slidingWalls {
 
+  0%{
 
-
-
+  }
+  
+  100%{
+    transform: translateX(-2400px);
+  }
+}
 
 
 
